@@ -4,30 +4,17 @@ public class App {
 
 	public static void main(String[] args) {
 
-		Car ferrari = new Car();
-		ferrari.setName("Ferrari");
-		ferrari.setMaxSpeed("200Mph");
-		ferrari.setWheelNumber(4);
-		ferrari.setElectric(false);
-		ferrari.vroom();
+		Car myCar = new Car("Ferrari", "200Mph", 4, true);
 
-		Bike ducatti = new Bike();
-		ducatti.setName("Ducatti");
-		ducatti.setMaxSpeed("120Mph");
-		ducatti.setWheelNumber(2);
-		ducatti.setHasSidecar(false);
-		ducatti.wheelie();
+		myCar.print();
+		myCar.vroom();
 
-		Plane boeing = new Plane();
-		boeing.setName("Boeing 747");
-		boeing.setMaxSpeed("500Mph");
-		boeing.setWheelNumber(6);
-		boeing.setHasWings(true);
-		boeing.barrelRoll();
+		Bike myBike = new Bike();
+		myBike.print();
 
-		ferrari.print();
-		ducatti.print();
-		boeing.print();
+		Plane myPlane = new Plane("Spaceball One", "Ludicrous Speed", 0, true);
+		myPlane.print();
+		myPlane.barrelRoll();
 
 	}
 

@@ -4,6 +4,15 @@ public class Bike extends Vehicle {
 
 	private boolean hasSidecar;
 
+	public Bike(String name, String maxSpeed, int wheelNumber, boolean hasSidecar) {
+		super(name, maxSpeed, wheelNumber);
+		this.hasSidecar = hasSidecar;
+	}
+
+	public Bike() {
+		super();
+	}
+
 	public boolean isHasSidecar() {
 		return hasSidecar;
 	}

@@ -4,6 +4,15 @@ public class Car extends Vehicle {
 
 	private boolean isElectric;
 
+	public Car(String name, String maxSpeed, int wheelNumber, boolean isElectric) {
+		super(name, maxSpeed, wheelNumber);
+		this.isElectric = isElectric;
+	}
+
+	public Car() {
+		super();
+	}
+
 	public boolean isElectric() {
 		return isElectric;
 	}

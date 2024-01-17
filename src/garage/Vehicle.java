@@ -9,6 +9,7 @@ public class Vehicle {
 	private int wheelNumber;
 
 	public Vehicle() {
+		super();
 
 	}
 

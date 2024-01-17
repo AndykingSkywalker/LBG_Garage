@@ -27,9 +27,7 @@ public class Bike extends Vehicle {
 
 	@Override
 	public void print() {
-		System.out.println("Vehicle Name: " + getName());
-		System.out.println("Max Speed: " + getMaxSpeed());
-		System.out.println("Number of Wheels: " + getWheelNumber());
+		super.print();
 		System.out.println("Does the bike have a sidecar? " + isHasSidecar());
 	}
 }

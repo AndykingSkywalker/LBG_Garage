@@ -62,4 +62,10 @@ public class Bike extends Vehicle {
 				+ ", getWheelNumber()=" + getWheelNumber() + "]";
 	}
 
+	@Override
+	public int calcBill() {
+
+		return 5;
+	}
+
 }

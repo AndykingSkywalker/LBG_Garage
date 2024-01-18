@@ -25,4 +25,14 @@ public class Garage {
 		return "vehicles=" + vehicles + "]";
 	}
 
+	public void fix() {
+		int totalBill = 0;
+		for (Vehicle vehicle : vehicles) {
+			int bill = vehicle.calcBill();
+			System.out.println(vehicle.getName() + ": " + bill);
+			totalBill += bill;
+		}
+		System.out.println("Total Bill: " + totalBill);
+	}
+
 }

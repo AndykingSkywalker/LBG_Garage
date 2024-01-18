@@ -62,4 +62,10 @@ public class Plane extends Vehicle {
 				+ ", getWheelNumber()=" + getWheelNumber() + "]";
 	}
 
+	@Override
+	public int calcBill() {
+		// TODO Auto-generated method stub
+		return 100;
+	}
+
 }

@@ -2,7 +2,7 @@ package garage;
 
 import java.util.Objects;
 
-public class Vehicle {
+public abstract class Vehicle {
 
 	private String name;
 
@@ -14,6 +14,8 @@ public class Vehicle {
 		super();
 
 	}
+
+	public abstract int calcBill();
 
 	public Vehicle(String name, String maxSpeed, int wheelNumber) {
 		super();

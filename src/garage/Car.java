@@ -62,4 +62,10 @@ public class Car extends Vehicle {
 				+ ", getWheelNumber()=" + getWheelNumber() + "]";
 	}
 
+	@Override
+	public int calcBill() {
+
+		return 10;
+	}
+
 }

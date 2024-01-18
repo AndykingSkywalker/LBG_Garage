@@ -14,10 +14,15 @@ public class Garage {
 		vehicles.remove(vehicle);
 	}
 
-	public void print() {
-		for (Vehicle vehicle : vehicles) {
-			vehicle.print();
-		}
+//	public void print() {
+//		for (Vehicle vehicle : vehicles) {
+//			vehicle.print();
+//		}
+//	}
+
+	@Override
+	public String toString() {
+		return "vehicles=" + vehicles + "]";
 	}
 
 }

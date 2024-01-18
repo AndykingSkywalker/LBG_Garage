@@ -9,6 +9,31 @@ public class Car extends Vehicle {
 		this.isElectric = isElectric;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+
+		Car other = (Car) obj;
+
+		if (!super.equals(obj)) {
+			return false;
+		}
+
+		if (this.isElectric != other.isElectric()) {
+			return false;
+		}
+
+		return true;
+	}
+
 	public Car() {
 		super();
 	}
@@ -25,9 +50,16 @@ public class Car extends Vehicle {
 		System.out.println("Vroom Vroom");
 	}
 
+//	@Override
+//	public void print() {
+//		super.print();
+//		System.out.println("Is the car electric? " + isElectric());
+//	}
+
 	@Override
-	public void print() {
-		super.print();
-		System.out.println("Is the car electric? " + isElectric());
+	public String toString() {
+		return "Car [isElectric=" + isElectric + ", getName()=" + getName() + ", getMaxSpeed()=" + getMaxSpeed()
+				+ ", getWheelNumber()=" + getWheelNumber() + "]";
 	}
+
 }

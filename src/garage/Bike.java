@@ -9,6 +9,31 @@ public class Bike extends Vehicle {
 		this.hasSidecar = hasSidecar;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+
+		Bike other = (Bike) obj;
+
+		if (!super.equals(obj)) {
+			return false;
+		}
+
+		if (this.hasSidecar != other.isHasSidecar()) {
+			return false;
+		}
+
+		return true;
+	}
+
 	public Bike() {
 		super();
 	}
@@ -25,9 +50,16 @@ public class Bike extends Vehicle {
 		System.out.println("Popped a wheelie");
 	}
 
+//	@Override
+//	public void print() {
+//		super.print();
+//		System.out.println("Does the bike have a sidecar? " + isHasSidecar());
+//	}
+
 	@Override
-	public void print() {
-		super.print();
-		System.out.println("Does the bike have a sidecar? " + isHasSidecar());
+	public String toString() {
+		return "Bike [hasSidecar=" + hasSidecar + ", getName()=" + getName() + ", getMaxSpeed()=" + getMaxSpeed()
+				+ ", getWheelNumber()=" + getWheelNumber() + "]";
 	}
+
 }

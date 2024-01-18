@@ -1,5 +1,7 @@
 package garage;
 
+import java.util.Objects;
+
 public class Vehicle {
 
 	private String name;
@@ -20,11 +22,11 @@ public class Vehicle {
 		this.wheelNumber = wheelNumber;
 	}
 
-	public void print() {
-		System.out.println("Vehicle Name: " + this.name);
-		System.out.println("Max Speed: " + this.maxSpeed);
-		System.out.println("Number of Wheels: " + this.wheelNumber);
-	}
+//	public void print() {
+//		System.out.println("Vehicle Name: " + this.name);
+//		System.out.println("Max Speed: " + this.maxSpeed);
+//		System.out.println("Number of Wheels: " + this.wheelNumber);
+//	}
 
 	public String getName() {
 		return name;
@@ -48,6 +50,27 @@ public class Vehicle {
 
 	public void setWheelNumber(int wheelNumber) {
 		this.wheelNumber = wheelNumber;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		Vehicle other = (Vehicle) obj;
+		return name == other.name && Objects.equals(maxSpeed, other.maxSpeed)
+				&& Objects.equals(wheelNumber, other.wheelNumber);
+	}
+
+	@Override
+	public String toString() {
+		return "Vehicle [name=" + name + ", maxSpeed=" + maxSpeed + ", wheelNumber=" + wheelNumber + "]";
 	}
 
 }

@@ -10,6 +10,10 @@ public abstract class Vehicle {
 
 	private int wheelNumber;
 
+	private int id;
+
+	public static int count = 1;
+
 	public Vehicle() {
 		super();
 
@@ -19,6 +23,7 @@ public abstract class Vehicle {
 
 	public Vehicle(String name, String maxSpeed, int wheelNumber) {
 		super();
+		this.id = count++;
 		this.name = name;
 		this.maxSpeed = maxSpeed;
 		this.wheelNumber = wheelNumber;
@@ -32,6 +37,14 @@ public abstract class Vehicle {
 
 	public String getName() {
 		return name;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public void setName(String name) {
@@ -72,7 +85,8 @@ public abstract class Vehicle {
 
 	@Override
 	public String toString() {
-		return "Vehicle [name=" + name + ", maxSpeed=" + maxSpeed + ", wheelNumber=" + wheelNumber + "]";
+		return "ID :" + getId() + "Vehicle [name=" + name + ", maxSpeed=" + maxSpeed + ", wheelNumber=" + wheelNumber
+				+ "]";
 	}
 
 }

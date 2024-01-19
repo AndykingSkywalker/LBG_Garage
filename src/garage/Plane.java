@@ -58,8 +58,8 @@ public class Plane extends Vehicle {
 
 	@Override
 	public String toString() {
-		return "Plane [hasWings=" + hasWings + ", getName()=" + getName() + ", getMaxSpeed()=" + getMaxSpeed()
-				+ ", getWheelNumber()=" + getWheelNumber() + "]";
+		return "ID: " + getId() + " Plane [hasWings=" + hasWings + ", getName()=" + getName() + ", getMaxSpeed()="
+				+ getMaxSpeed() + ", getWheelNumber()=" + getWheelNumber() + "]";
 	}
 
 	@Override

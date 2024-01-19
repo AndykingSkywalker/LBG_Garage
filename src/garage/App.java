@@ -9,23 +9,28 @@ public class App {
 		ArrayList<Vehicle> vehicles = new ArrayList<>();
 
 		vehicles.add(new Car("Ferrari", "200Mph", 4, true));
-		vehicles.add(new Plane("Spaceball One", "Ludicrous Speed", 0, true));
-		vehicles.add(new Bike());
+		vehicles.add(new Car("Lambo", "250Mph", 4, true));
+		vehicles.add(new Car("Ford", "90Mph", 4, true));
 
 		Car myCar = new Car("Ferrari", "200Mph", 4, true);
 		Car myCar2 = new Car("Ferrari", "220Mph", 4, true);
-//
-//		Bike myBike = new Bike();
-//
-		Plane myPlane = new Plane("Spaceball One", "Ludicrous Speed", 0, true);
-		Plane myPlane2 = new Plane("Spaceball One", "Ludicrous Speed", 0, true);
+////
+////		Bike myBike = new Bike();
+////
+//		Plane myPlane = new Plane("Spaceball One", "Ludicrous Speed", 0, true);
+//		Plane myPlane2 = new Plane("Spaceball One", "Ludicrous Speed", 0, true);
 
 //		Vehicle[] vehicles = { myCar, myBike, myPlane };
 
 //		System.out.println(vehicles);
 
 		Garage myGarage = new Garage();
-
+//
+//		myGarage.addToGarage(new Car("Ferrari", "100mph", 4, true));
+//		myGarage.addToGarage(new Car("Lambo", "120mph", 4, true));
+//		myGarage.addToGarage(new Car("Ford", "80mph", 4, true));
+//
+//		System.out.println(myGarage.toString());
 		myGarage.addToGarage(new Car("Ferrari", "140Mph", 4, true));
 		myGarage.addToGarage(new Car("Rocket Car", "200Mph", 3, false));
 		myGarage.addToGarage(new Plane("Spaceball One", "Ludicrous Speed", 0, true));
@@ -42,10 +47,12 @@ public class App {
 //			vehicle.print();
 //		}
 
-		System.out.println(myCar.toString());
-		System.out.println(myPlane);
+		myGarage.removeById(9);
 
-		myGarage.fix();
+		System.out.println(myGarage.toString());
+
+//
+//		
 
 	}
 

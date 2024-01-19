@@ -58,8 +58,8 @@ public class Car extends Vehicle {
 
 	@Override
 	public String toString() {
-		return "Car [isElectric=" + isElectric + ", getName()=" + getName() + ", getMaxSpeed()=" + getMaxSpeed()
-				+ ", getWheelNumber()=" + getWheelNumber() + "]";
+		return "ID: " + getId() + " Car [isElectric=" + isElectric + ", getName()=" + getName() + ", getMaxSpeed()="
+				+ getMaxSpeed() + ", getWheelNumber()=" + getWheelNumber() + "]";
 	}
 
 	@Override

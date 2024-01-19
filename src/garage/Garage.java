@@ -1,6 +1,7 @@
 package garage;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Garage {
 
@@ -12,6 +13,16 @@ public class Garage {
 
 	public void removeFromGarage(Vehicle vehicle) {
 		vehicles.remove(vehicle);
+	}
+
+	public boolean removeById(int id) {
+		List<Vehicle> toRemove = new ArrayList<Vehicle>();
+		for (Vehicle vehicle : this.vehicles) {
+			if (vehicle.getId() == id) {
+				toRemove.add(vehicle);
+			}
+		}
+		return this.vehicles.removeAll(toRemove);
 	}
 
 //	public void print() {

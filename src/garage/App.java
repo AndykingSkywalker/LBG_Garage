@@ -1,6 +1,7 @@
 package garage;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class App {
 
@@ -47,9 +48,15 @@ public class App {
 //			vehicle.print();
 //		}
 
-		myGarage.removeById(9);
+//		myGarage.removeById(9);
 
-		System.out.println(myGarage.toString());
+//		System.out.println(myGarage.toString());
+
+		System.out.println("VEHICLES: " + vehicles);
+
+		Collections.sort(vehicles);
+
+		System.out.println("VEHICLES: " + vehicles);
 
 //
 //		

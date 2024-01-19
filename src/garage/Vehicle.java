@@ -2,7 +2,7 @@ package garage;
 
 import java.util.Objects;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Comparable<Vehicle> {
 
 	private String name;
 
@@ -12,10 +12,11 @@ public abstract class Vehicle {
 
 	private int id;
 
-	public static int count = 1;
+	private static int count = 1;
 
 	public Vehicle() {
 		super();
+		this.id = count++;
 
 	}
 
@@ -37,6 +38,19 @@ public abstract class Vehicle {
 
 	public String getName() {
 		return name;
+	}
+
+	@Override
+	public int compareTo(Vehicle o) {
+		// order by ASC
+		if (id < o.getId()) {
+			return +1;
+		} else if (id > o.getId()) {
+			return -1;
+		} else {
+			return 0;
+		}
+
 	}
 
 	public int getId() {
